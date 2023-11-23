@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Form from "./components/Form/Form";
+import List from "./components/List/List";
+import "./App.css";
 
 function App() {
+  const [inputText, setInputText] = useState("");
+  const [inputQty, setInputQty] = useState(1);
+  const [listItems, setListItems] = useState([]);
+
+  // Get from local storage
+  useEffect(() => {
+    const storedListItems = JSON.parse(localStorage.getItem("listItems")) || [];
+    setListItems(storedListItems);
+  }, []);
+
+  // Save to local storage
+  useEffect(() => {
+    localStorage.setItem("listItems", JSON.stringify(listItems));
+  }, [listItems]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <section className="shopping-list">
+        <h1 className="shopping-list__title">Shopping List</h1>
+
+        <div className="shopping-list__form form">
+          <Form
+            inputText={inputText}
+            setInputText={setInputText}
+            inputQty={inputQty}
+            setInputQty={setInputQty}
+            listItems={listItems}
+            setListItems={setListItems}
+          />
+        </div>
+
+        <div className="shopping-list__list list">
+          <List listItems={listItems} setListItems={setListItems} />
+        </div>
+      </section>
     </div>
   );
 }

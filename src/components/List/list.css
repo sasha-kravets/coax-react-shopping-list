@@ -1,0 +1,73 @@
+.list__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-height: 380px;
+  overflow-y: scroll;
+
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.list__container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list__container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.item-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--list-font);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.item-list__qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 3px;
+  background: var(--main-color);
+}
+
+.item-list__title {
+  color: var(--list-item-text-color);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.item-list__button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.item-list.completed {
+  border-color: #c1c1c2;
+}
+
+.item-list.completed .item-list__title {
+  text-decoration: line-through;
+  color: #c1c1c2;
+}
+
+.item-list.completed .item-list__qty {
+  background: #c1c1c2;
+}
+
+.item-list.completed .item-list__button svg path {
+  fill: #c1c1c2;
+}

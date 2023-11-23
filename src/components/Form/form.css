@@ -1,0 +1,44 @@
+.form__container {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 474px) {
+  .form__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.form__input {
+  max-width: 192px;
+  padding: 6px;
+  background: var(--input-background-color);
+  color: var(--input-text-color);
+  font-family: var(--form-font);
+  font-size: 18.22px;
+  font-weight: 300;
+  border-radius: 3px;
+}
+
+.form__input_number {
+  max-width: 64px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.form__button { 
+  background: none;
+  padding: 6px 30px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  color: var(--main-color);
+  font-family: var(--form-font);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.form__button:hover {
+  background: #4c4c4d;
+}
