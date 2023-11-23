@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/coax-react-shopping-list/static/css/main.63e53732.css",
+    "main.js": "/coax-react-shopping-list/static/js/main.775ddd7f.js",
+    "static/media/removebg-preview.png": "/coax-react-shopping-list/static/media/removebg-preview.d7b125ccccb9daea8e5f.png",
+    "index.html": "/coax-react-shopping-list/index.html",
+    "main.63e53732.css.map": "/coax-react-shopping-list/static/css/main.63e53732.css.map",
+    "main.775ddd7f.js.map": "/coax-react-shopping-list/static/js/main.775ddd7f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63e53732.css",
+    "static/js/main.775ddd7f.js"
+  ]
+}
